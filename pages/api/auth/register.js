@@ -1,5 +1,5 @@
 import connectDB from '../../api/db';
-import User from '../../models/user';
+import User from '../../../models/user';
 import bcrypt from 'bcrypt';
 
 connectDB();

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const RegisterForm = () => {
+const   RegisterForm = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
