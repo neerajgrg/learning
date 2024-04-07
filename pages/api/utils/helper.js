@@ -1,8 +1,10 @@
 import jwt from 'jsonwebtoken';
-function getDataFromToken(request) {
+
+
+export default function getDataFromToken(request) {
     try {
         // Retrieve the token from the cookies
-        const token = (request.cookies.get('token') || {}).value || '';
+        const token = (request?.cookies || {} )["token"] || '';
 
         // Verify and decode the token using the secret key
         const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
@@ -11,8 +13,7 @@ function getDataFromToken(request) {
         return decodedToken && decodedToken.id;
 
     } catch (error) {
-        throw new Error(error.message);
+        console.log(error);
+        throw new Error(error);
     }
 }
-
-module.exports = { getDataFromToken };
