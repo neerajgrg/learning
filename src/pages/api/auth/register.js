@@ -1,4 +1,5 @@
-import connectDB from '../../api/db';
+
+import connectDB from '../../../lib/db';
 import User from '../../../models/user';
 import bcrypt from 'bcrypt';
 

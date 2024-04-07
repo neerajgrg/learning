@@ -1,9 +1,10 @@
 // api/auth/login.js
 
-import connectDB from '../db';
+
 import User from '../../../models/user';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import connectDB from '../../../lib/db';
 
 connectDB();
 

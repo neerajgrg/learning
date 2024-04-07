@@ -1,6 +1,7 @@
-import connectDB from '../../api/db';
+
 import User from '../../../models/user';
-import getDataFromToken from '../utils/helper';
+import getDataFromToken from '../../../lib/utils/helper';
+import connectDB from '../../../lib/db';
 
 connectDB();
 
