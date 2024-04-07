@@ -1,14 +1,14 @@
 // pages/register.js
 import React from 'react';
-import RegisterForm from '../components/SignupPage';
+import SignupForm from '../components/SignupForm';
 
-const RegisterPage = () => {
+const SignupPage = () => {
   return (
     <div>
       <h1>Register</h1>
-      <RegisterForm />
+      <SignupForm />
     </div>
   );
 };
 
-export default RegisterPage;
+export default SignupPage;
