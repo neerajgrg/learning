@@ -1,51 +1,59 @@
 // components/LoginForm.js
 
-import React, { useState } from 'react';
-import axios from 'axios';
+import Link from "next/link";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
-const LoginForm = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+export default function SignupPage() {
+  const router = useRouter();
+  const [loading, setLoading] = React.useState(false);
+  const [user, setUser] = React.useState({
+    email: "",
+    password: "",
+  })
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onLogin = async () => {
     try {
-      const response = await axios.post('/api/auth/login', formData);
-      console.log(response.data);
-      // Redirect or show success message
+      setLoading(true);
+      const response = await axios.post("/api/auth/login", user);
+      router.push("/");
+
     } catch (error) {
-      console.error(error.response.data);
-      // Show error message
+      console.log("Login failed", error.message);
+
+    } finally {
+      setLoading(false);
     }
-  };
+  }
+
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Email"
-        required
-      />
-      <input
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        placeholder="Password"
-        required
-      />
-      <button type="submit">Login</button>
-    </form>
-  );
-};
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <h1>{loading ? "Processing" : "Login"}</h1>
+      <hr />
 
-export default LoginForm;
+      <label htmlFor="email">email</label>
+      <input
+        id="email"
+        type="text"
+        value={user.email}
+        onChange={(e) => setUser({ ...user, email: e.target.value })}
+        placeholder="email"
+      />
+      <label htmlFor="password">password</label>
+      <input
+        id="password"
+        type="password"
+        value={user.password}
+        onChange={(e) => setUser({ ...user, password: e.target.value })}
+        placeholder="password"
+      />
+      <button
+        onClick={onLogin}></button>
+      <Link href="/signup">Visit signup page</Link>
+    </div>
+  )
+
+}
