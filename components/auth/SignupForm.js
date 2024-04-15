@@ -3,7 +3,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import styles from '../../styles/SignupForm.module.css';
+import styles from '../../styles/components/auth/SignupForm.module.css';
 
 export default function SignupForm() {
     const router = useRouter();

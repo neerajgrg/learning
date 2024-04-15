@@ -1,0 +1,24 @@
+/* LoginForm.module.css */
+.container {
+  @apply flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100;
+}
+
+.title {
+  @apply text-2xl font-bold mb-8;
+}
+
+.label {
+  @apply block mb-2;
+}
+
+.input {
+  @apply w-full px-3 py-2 border rounded shadow appearance-none mb-4;
+}
+
+.button {
+  @apply w-full px-3 py-2 mt-4 bg-blue-500 text-white font-bold rounded hover:bg-blue-700;
+}
+
+.link {
+  @apply text-blue-500 hover:text-blue-700;
+}

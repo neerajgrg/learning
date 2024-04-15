@@ -1,0 +1,11 @@
+.signup-form {
+    @apply flex flex-col items-center justify-center p-8 bg-white rounded-lg shadow-md;
+}
+
+.signup-form input {
+    @apply w-full px-2 py-1 mb-4 border border-gray-300 rounded-md;
+}
+
+.signup-form button {
+    @apply px-4 py-2 bg-blue-500 text-white border-0 rounded-md cursor-pointer;
+}

@@ -1,6 +1,6 @@
 // pages/404.js
 import Link from 'next/link';
-import styles from './404.module.css';
+import styles from '../styles/pages/404.module.css';
 
 export default function Custom404() {
     return (
