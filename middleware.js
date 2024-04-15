@@ -7,7 +7,8 @@ function middleware(request) {
     const isPublicPath = path === '/login' || path === '/signup' || path === '/verifyemail';
 
     // Get the token from the cookies
-    const token = (request.cookies.get('token') || {}).value || '';
+    // Get the token from the cookies
+    const token = request.cookies['token'] || '';
 
     // Redirect logic based on the path and token presence
     if(isPublicPath && token) {
@@ -23,7 +24,7 @@ function middleware(request) {
 
 // It specifies the paths for which this middleware should be executed. 
 // In this case, it's applied to '/', '/profile', '/login', and '/signup'.
-const config = {
+export const config = {
     matcher: [
         '/',
         '/profile',
@@ -33,4 +34,4 @@ const config = {
     ]
 };
 
-module.exports = { middleware, config };
+export default middleware;
