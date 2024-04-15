@@ -1,0 +1,16 @@
+/* 404.module.css */
+.container {
+    @apply flex flex-col items-center justify-center min-h-screen text-center bg-gray-100;
+}
+
+.title {
+    @apply text-6xl font-bold text-red-500;
+}
+
+.subtitle {
+    @apply text-2xl mb-8;
+}
+
+.link {
+    @apply text-blue-500 hover:text-blue-700;
+}
