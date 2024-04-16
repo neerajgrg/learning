@@ -1,24 +1,27 @@
-import Link from "next/link";
+// components/layout/main-navigation.js
+import React from 'react';
+import Link from 'next/link';
+import Logo from './logo';
+import styles from '../../styles/components/layout/main-navigation.module.css';
 
-import classes from "../../styles/components/layout/main-navigation.module.css";
-import Logo from "./logo";
-
-function MainNavigation() {
+const MainNavigation = () => {
   return (
-    <header className={classes.header}>
-      <Link href="/">
-          <Logo />
-      </Link>
-      <ul>
-        <li>
-          <Link href="/posts">Posts</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-      </ul>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <Logo />
+      </div>
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <Link href="/signup">Sign Up</Link>
+          </li>
+          <li>
+            <Link href="/login">Sign In</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
-}
+};
 
 export default MainNavigation;

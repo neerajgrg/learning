@@ -18,7 +18,7 @@ function middleware(request) {
 
     // If trying to access a protected path without a token, redirect to the login page
     if (!isPublicPath && !token) {
-        return NextResponse.redirect(new URL('/login', request.nextUrl));
+        return NextResponse.redirect(new URL('/', request.nextUrl));
     }
 }
 

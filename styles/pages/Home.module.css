@@ -1,0 +1,23 @@
+/* styles/pages/Home.module.css */
+.container {
+    @apply flex flex-col items-center justify-center h-screen;
+    background-color: var(--primary-color);
+}
+
+.searchBar {
+    @apply px-4 py-2 mb-4 border rounded-md;
+    border-color: var(--input-border-color);
+}
+
+.searchButton {
+    @apply px-4 py-2 mb-4 text-white rounded-md;
+    background-color: var(--button-color);
+}
+
+.links {
+    @apply flex justify-between w-1/2;
+}
+
+.link {
+    @apply text-blue-500 hover:text-blue-700;
+}

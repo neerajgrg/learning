@@ -1,15 +1,14 @@
+/* styles/components/layout/MainNavigation.module.css */
 .header {
-  @apply bg-blue-500 text-white p-6;
+  @apply flex items-center justify-between px-8 py-4;
+  background-color: var(--secondary-color);
 }
 
-.header a {
-  @apply text-4xl font-bold;
-}
-
-.header ul {
+.nav ul {
   @apply flex space-x-4;
 }
 
-.header ul li a {
-  @apply hover:text-blue-300 transition duration-200;
+.nav ul li {
+  color: var(--primary-color);
+  list-style: none;
 }

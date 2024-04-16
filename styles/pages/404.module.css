@@ -1,16 +1,20 @@
 /* 404.module.css */
 .container {
-    @apply flex flex-col items-center justify-center min-h-screen text-center bg-gray-100;
+    @apply flex flex-col items-center justify-center min-h-screen text-center;
+    background-color: var(--primary-color);
 }
 
 .title {
-    @apply text-6xl font-bold text-red-500;
+    @apply text-6xl font-bold;
+    color: var(--secondary-color);
 }
 
 .subtitle {
     @apply text-2xl mb-8;
+    color: var(--secondary-color);
 }
 
 .link {
-    @apply text-blue-500 hover:text-blue-700;
+    @apply hover:text-blue-700;
+    color: var(--link-color);
 }

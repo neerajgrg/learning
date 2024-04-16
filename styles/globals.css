@@ -1,23 +1,32 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+:root {
+  --primary-color: #f7fafc;
+  --secondary-color: #2d3748;
+  --input-border-color: #d2d6dc;
+  --button-color: #4299e1;
+  --link-color: #4299e1;
+  --font-family: 'Roboto', sans-serif;
+  --size-5: 1.25rem; /* 20px */
+  --size-8: 2.25rem; /* 36px */
+}
 
-@layer base {
-  body {
-    @apply m-0 bg-green-500 text-gray-900 font-sans;
-  }
+body {
+  @apply m-0 font-sans;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+}
 
-  h1,
-  h2,
-  h3 {
-    @apply font-oswald;
-  }
+h1,
+h2,
+h3 {
+  @apply font-oswald;
+}
 
-  a {
-    @apply no-underline;
-  }
+a {
+  @apply no-underline;
+  color: var(--link-color);
+}
 
-  button {
-    @apply font-inherit cursor-pointer;
-  }
+button {
+  @apply font-inherit cursor-pointer;
 }

@@ -1,24 +1,30 @@
 /* LoginForm.module.css */
 .container {
-  @apply flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100;
+  @apply flex flex-col items-center justify-center min-h-screen py-2;
+  background-color: var(--primary-color);
 }
 
 .title {
   @apply text-2xl font-bold mb-8;
+  color: var(--secondary-color);
 }
 
 .label {
   @apply block mb-2;
+  color: var(--secondary-color);
 }
 
 .input {
   @apply w-full px-3 py-2 border rounded shadow appearance-none mb-4;
+  border-color: var(--secondary-color);
 }
 
 .button {
-  @apply w-full px-3 py-2 mt-4 bg-blue-500 text-white font-bold rounded hover:bg-blue-700;
+  @apply w-full px-3 py-2 mt-4 text-white font-bold rounded;
+  background-color: var(--button-color);
 }
 
 .link {
-  @apply text-blue-500 hover:text-blue-700;
+  @apply hover:text-blue-700;
+  color: var(--link-color);
 }
