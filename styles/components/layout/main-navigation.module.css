@@ -1,0 +1,15 @@
+.header {
+  @apply bg-blue-500 text-white p-6;
+}
+
+.header a {
+  @apply text-4xl font-bold;
+}
+
+.header ul {
+  @apply flex space-x-4;
+}
+
+.header ul li a {
+  @apply hover:text-blue-300 transition duration-200;
+}

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply m-0 bg-red-500 text-gray-900 font-sans;
+    @apply m-0 bg-green-500 text-gray-900 font-sans;
   }
 
   h1,
